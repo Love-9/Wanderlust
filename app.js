@@ -71,6 +71,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.engine('ejs', ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
+app.use('/CSS', express.static(path.join(__dirname, 'public', 'CSS')));
+app.use('/JS', express.static(path.join(__dirname, 'public', 'JS')));
 
 // const MONGO_URL = 'mongodb://127.0.0.1:27017/wanderlust';
 
